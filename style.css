@@ -1,0 +1,20 @@
+/*
+	Theme Name: Portfolio
+	Theme URI: http://html5blank.com
+	Description: Portfolio WordPress Theme
+	Version: 1.4.3
+	Author: Artur Feldens (@feldens00)
+	Author URI: 
+	Tags: Portfolio, HTML5, CSS3
+
+	License: MIT
+	License URI: 
+*/
+
+/*------------------------------------*\
+    CUSTOM CSS
+\*------------------------------------*/
+
+p {
+	text-align: justify; 
+}
