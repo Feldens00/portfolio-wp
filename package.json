@@ -9,6 +9,7 @@
     "jquery": "^3.3.1"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.2",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-jshint": "^2.1.0",

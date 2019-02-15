@@ -39,6 +39,7 @@ function pagination()
         'total' => $wp_query->max_num_pages
     ));
 }
+
 function images_path() {
     return get_template_directory_uri(). '/public/assets/images';
 }
@@ -48,11 +49,7 @@ function cpt_search( $query ) {
         $query->set( 'post_type', array(
             'page', 
             'post',
-            'news',
-            'company',
-            'history',
-            'infrastructure',
-            'program'  
+            'project'
         ) );
     }
 }
@@ -63,12 +60,19 @@ function getAllPostTypes() {
     return $dirs;
 }
 
+function posts_on_homepage( $query ) {
+    if ( $query->is_home() && $query->is_main_query() ) {
+        $query->set( 'posts_per_page', get_option( 'posts_per_page' ));
+        $query->set( 'post_type', 'project');
+    }
+}
+
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
 \*------------------------------------*/
 
 // Add Actions
-
+add_action( 'pre_get_posts', 'posts_on_homepage' );
 // Add Filters
 add_filter('pre_get_posts', 'cpt_search');
 

@@ -1,43 +1,30 @@
 .list {
-	* {
-  		box-sizing: border-box;
+	.grid {
+		height: 40vh;
+	}
+	.img-wraper {
+		background-size: cover;
+		background-position: top;
+		transition: box-shadow 0.6s linear;
+  		margin: 0.5em;
+
+		.obj-title {
+			position: relative;
+			top: 30%;
+			color: white;
+			font-weight: bold;
+			display: none;
+		}
 	}
 
-	.row-flex {
-	  display: -ms-flexbox; /* IE10 */
-	  display: flex;
-	  -ms-flex-wrap: wrap; /* IE10 */
-	  flex-wrap: wrap;
-	  padding: 0 4px;
-	}
-
-	/* Create four equal columns that sits next to each other */
-	.column {
-	  -ms-flex: 33.3%; /* IE10 */
-	  flex: 33.3%;
-	  max-width: 33.3%;
-	  padding: 0;
-	}
-
-	.column img {
-	  vertical-align: middle;
-	}
-
-	/* Responsive layout - makes a two column-layout instead of four columns */
-	@media screen and (max-width: 800px) {
-	  .column {
-	    -ms-flex: 50%;
-	    flex: 50%;
-	    max-width: 50%;
-	  }
-	}
-
-	/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-	@media screen and (max-width: 600px) {
-	  .column {
-	    -ms-flex: 100%;
-	    flex: 100%;
-	    max-width: 100%;
-	  }
+	a:hover {
+		.obj-title {
+			display: block;
+		}
+		.img-wraper {
+			background-blend-mode: overlay;
+			background-color: rgba(0,0,0,0.5);
+			box-shadow: 0px 0px 0px 8px darkgrey;
+		}
 	}
 }

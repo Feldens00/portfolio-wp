@@ -1,32 +1,20 @@
 <!-- Loop -->
-<?php
-	$query_args = array(
-	'post_type' => 'project',
-	'post_status' => 'publish',
-	'posts_per_page' => 9
-	);
+<div class="container-fluid list pb-5">
+	<div class="row p-0">
+		<?php if ( have_posts() ) :  while ( have_posts() ) : the_post(); 
+			$slug = get_post_field( 'post_name', get_post() );
+		?>
 
-	$the_query = new WP_Query($query_args);
-	$cont = 0;
-?>
-<div class="container-fluid list p-0">
-	<div class="row-flex p-0">
-		<?php if (have_posts()): while ($the_query->have_posts()) : $the_query->the_post(); 
-			$cont++;
-
-			if($cont==1):?>
-				<div class="column">
-			<?php endif;?>
-
-				<img src="<?php the_post_thumbnail_url(); ?>" alt="Card image" style="width:100%">
-
-			<?php if ($cont==3): ?>
+		<div class="col-sm-3 py-3 px-2 grid">
+			<a href="#" id="<?php echo $slug; ?>" onclick="oppen_lightbox('<?php echo $slug; ?>','<?php the_post_thumbnail_url(); ?>')" style="text-decoration: none;">
+				<div class="img-wraper h-100" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+					<h3 class="pt-3 obj-title text-center"><?php the_title(); ?></h3>
+					<div class="text-hide obj-content"><?php the_content(); ?></div>
 				</div>
-			<?php
-				$cont = 0; 
-				endif;
-		endwhile; ?>
-
+			</a>
+		</div>
+			
+		<?php endwhile; ?>
 		<?php else: ?>
 
 			<!-- article -->
@@ -35,8 +23,9 @@
 			</article>
 			<!-- /article -->
 
-		<?php endif; ?>
+		<?php endif;  ?>
 	</div>
 </div>
 <!-- /Loop -->
+
 
