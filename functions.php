@@ -12,20 +12,35 @@
 require_once(get_template_directory().'/model/index.php');
 
 /*------------------------------------*\
-	Theme Support
-\*------------------------------------*/
-
-// Add Theme suports
-add_theme_support('post-thumbnails'); // Adiciona a imagem de descricao no post
-add_theme_support('menus');
-add_image_size('large', 700, '', true); 
-add_image_size('medium', 250, '', true); 
-add_image_size('small', 120, '', true); 
-add_image_size('custom-size', 700, 200, true);
-
-/*------------------------------------*\
 	Functions
 \*------------------------------------*/
+function register_my_menu() {
+    register_nav_menu( 'sidebar-menu', 'Sidebar Menu' );
+}
+
+function html5blank_nav()
+{
+    wp_nav_menu(
+    array(
+        'theme_location'  => 'sidebar-menu',
+        'menu'            => '',
+        'container'       => 'div',
+        'container_class' => 'menu-{menu slug}-container',
+        'container_id'    => '',
+        'menu_class'      => 'menu',
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'items_wrap'      => '<ul class="p-0">%3$s</ul>',
+        'depth'           => 0,
+        'walker'          => ''
+        )
+    );
+}
 
 // Paginação 
 function pagination()
@@ -73,8 +88,11 @@ function posts_on_homepage( $query ) {
 
 // Add Actions
 add_action( 'pre_get_posts', 'posts_on_homepage' );
+add_action( 'init', 'register_my_menu' );
+
 // Add Filters
 add_filter('pre_get_posts', 'cpt_search');
+
 
 // Remove Filters
 
@@ -83,6 +101,18 @@ add_filter('pre_get_posts', 'cpt_search');
 
 // Shortcodes above would be nested like this -
 // [html5_shortcode_demo] [html5_shortcode_demo_2] Here's the page title! [/html5_shortcode_demo_2] [/html5_shortcode_demo]
+
+/*------------------------------------*\
+    Theme Support
+\*------------------------------------*/
+
+// Add Theme suports
+add_theme_support('post-thumbnails'); // Adiciona a imagem de descricao no post
+add_theme_support('menus');
+add_image_size('large', 700, '', true); 
+add_image_size('medium', 250, '', true); 
+add_image_size('small', 120, '', true); 
+add_image_size('custom-size', 700, 200, true);
 
 /*------------------------------------*\
 	Custom Post Types

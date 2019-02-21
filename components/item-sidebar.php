@@ -1,16 +1,14 @@
 <!-- Sidebar -->
 	<div class="sidebar">
-		<div class="container h-100">
+		<div class="container py-md-2 py-sm-5 my-md-3 my-sm-0 container-border">
 			<div class="row pb-5">
 				<div class="col-sm-12 text-center">
-					<img src="https://www.tilibra.com.br/storage/products/md/god-of-war_god-of-war.png" class="img-fluid">
+					<img src="http://localhost/portfolio/wp-content/uploads/2019/02/Logo-Alexandre-Kuhn.png" class="img-icone">
 				</div>
 				<hr/>
-				<div class="col-sm-12">
-					<a href="#about">About</a>
-					<a href="#services">Services</a>
-				 	<a href="#clients">Clients</a>
-				 	<a href="#contact">Contact</a>
+				<div class="col-sm-12 pt-5">
+
+					<?php html5blank_nav(); ?>
 				</div>
 			</div>
 			<div class="row py-md-5 px-3 text-center" id="sidebar-footer">

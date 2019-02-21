@@ -6,10 +6,9 @@
 		?>
 
 		<div class="col-sm-3 py-3 px-2 grid">
-			<a href="#" id="<?php echo $slug; ?>" onclick="oppen_lightbox('<?php echo $slug; ?>','<?php the_post_thumbnail_url(); ?>')" style="text-decoration: none;">
+			<a href="<?php echo get_post_permalink(); ?>" id="<?php echo $slug; ?>" onclick="" style="text-decoration: none;">
 				<div class="img-wraper h-100" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
 					<h3 class="pt-3 obj-title text-center"><?php the_title(); ?></h3>
-					<div class="text-hide obj-content"><?php the_content(); ?></div>
 				</div>
 			</a>
 		</div>

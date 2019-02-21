@@ -5,12 +5,16 @@
     height: 100vh;
     display: none;
 
+    .content-lightbox {
+        position: relative;
+        height: 85vh;
+    }
     #lightbox-img {
-    	max-height: 50vh;
+        max-height: 100% !important;
     }
     @media screen and (min-width: 992px) {
   		#lightbox-img {
-    		max-height: 75vh;
+    		max-height: 85vh;
     	}
 	}
 }
