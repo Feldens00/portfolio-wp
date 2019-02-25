@@ -6,6 +6,7 @@
     position: fixed;
     bottom: 0;
     top: 0;
+    background-color: #f0f4f4;
 }
 
 .img-icone {
@@ -36,11 +37,6 @@
   width: 100%;
 }
 
-.container-border {
-  border-right: 1px solid;
-  height: 95%;
-}
-
 @media screen and (max-width: 700px) {
   .sidebar {
     width: 100%;
@@ -55,10 +51,6 @@
     width: 100vw;
   }
 
-  .container-border {
-    border-right: 0px;
-    height: 100%;
-  }
 }
 
 @media screen and (max-width: 400px) {
