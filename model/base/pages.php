@@ -15,8 +15,13 @@ function create_pages_fly($pageName,$slug, $template) {
   wp_insert_post($createPage);
 }
 function check_pages_live() {
+
   if (get_page_by_path('contact') == NULL) {
-    create_pages_fly('Contato','contact','');
+    create_pages_fly('CONTATO','contact','');
+  }
+
+  if (get_page_by_path('about') == NULL) {
+    create_pages_fly('SOBRE','about','');
   }
 }
 add_action('init', 'check_pages_live');

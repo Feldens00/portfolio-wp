@@ -3,15 +3,7 @@
 <?php get_template_part('components/item','sidebar'); ?>
 	<div class="main">
 		<section id="single">
-			<?php if (have_posts()): while (have_posts()) : the_post(); 
-
-				$img1[] = get_field("project-img-1");
-				$img2[] = get_field("project-img-2");
-				$img3[] = get_field("project-img-3");
-				$img4[] = get_field("project-img-4");
-				// echo "<pre>";
-				// var_dump($img1);
-			?>
+			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 				<div class="container-fluid p-5">
 					<div class="row text-center ">
 						<div class="col-md-12 pt-4">

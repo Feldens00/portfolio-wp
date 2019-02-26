@@ -1,4 +1,16 @@
-
+body {
+    height: 100vh;
+}
+* {
+   margin: 0;
+   padding: 0;
+}
+hr {
+  width: 80%; color: black; height: 1px; background-color:black;
+}
+.title {
+    color: #FBB040;
+}
 .main {
   margin-left: 300px;
   background: white;
@@ -13,10 +25,11 @@
     
     .page-numbers {
     	color: white;
-	    background-color: black;
+	    background-color: #FBB040;
 	    padding: 10px;
     }
 }
-hr {
-  width: 80%; color: black; height: 1px; background-color:black;
+.box {
+  border: 1px solid #d3d3d3;
+  height: 50vh;
 }

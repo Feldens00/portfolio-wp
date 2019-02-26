@@ -1,19 +1,12 @@
 <?php get_header(); ?>
+<?php get_template_part('components/item','sidebar'); ?>
+	<div class="main">
+			<?php 
+				if (get_post_type() == "service") {
+        			get_template_part('lists/item','list-service');
+    			}
 
-	<main role="main">
-		<!-- section -->
-		<section>
-
-			<h1><?php _e( 'Archives', 'portfolio' ); ?></h1>
-
-			<?php get_template_part('loop'); ?>
-
-			<?php get_template_part('pagination'); ?>
-
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
-
+    			get_template_part('pagination');  
+    		?>
+	</div>
 <?php get_footer(); ?>

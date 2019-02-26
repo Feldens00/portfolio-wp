@@ -1,0 +1,64 @@
+.page {
+
+	.wpcf7 {
+		p {
+			text-align: center;
+		}
+	}
+
+	.btn-form {
+		background-color: #fbb040;
+	    border: none;
+	    padding: 10px 50px 10px 50px;
+	    color: white;
+	    font-size: 20px;
+	    font-weight: bold;
+	    border-radius: 10px;
+	}
+	.img-about {
+		height: 100vh;
+		width: auto;
+		max-width: 100%;
+	}
+
+	.pt-about {
+		padding-top: 10rem;
+	}
+
+	input, textarea {
+		border: 1px solid #d3d3d3;
+		color: #d3d3d3;
+		padding: 10px;
+	}
+
+	::-webkit-input-placeholder {
+	   color: #d3d3d3;
+	   padding: 5px;
+	}
+
+	:-moz-placeholder {
+	   color: #d3d3d3;
+	   padding: 5px;
+	}
+
+	::-moz-placeholder {
+	   color: #d3d3d3;  
+	   padding: 5px;
+	}
+
+	:-ms-input-placeholder {  
+	   color: #d3d3d3;  
+	   padding: 5px;
+	}
+
+	@media screen and (max-width: 700px) {
+		
+		.img-about {
+			height: auto;
+			width: 100%;
+		}
+		.pt-about {
+			padding-top: 3rem;
+		}
+	}
+}

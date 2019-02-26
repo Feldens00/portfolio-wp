@@ -10,7 +10,7 @@
 }
 
 .img-icone {
-  max-width: 60%;
+  max-width: 40%;
   height: auto;
 }
 
@@ -20,8 +20,8 @@
   a{
     display: block;
     text-decoration: none;
-    color: black;
-    padding: 10px;
+    color: #FBB040;
+    padding: 2px;
     font-size: 20px;
     font-weight: bold;
   }
@@ -35,6 +35,14 @@
   position: absolute;
   bottom: 0px;
   width: 100%;
+  color: #FBB040;
+}
+
+.div-menu {
+  padding-top: 100px;
+  .px-5 {
+    padding-left: 5rem !important;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -51,6 +59,11 @@
     width: 100vw;
   }
 
+  .div-menu {
+    .px-5 {
+      padding-left: 3rem !important;
+    }
+  }
 }
 
 @media screen and (max-width: 400px) {
