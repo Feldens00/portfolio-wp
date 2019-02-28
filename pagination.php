@@ -1,5 +1,5 @@
 <!-- pagination -->
-<div class="div-pagination">
+<div class="div-pagination pb-5">
 	<?php pagination(); ?>
 </div>
 <!-- /pagination -->

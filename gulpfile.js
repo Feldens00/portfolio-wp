@@ -8,11 +8,11 @@ var watch = require('gulp-watch');
 //task para o sass
 gulp.task('style', function () {
 
-   	return gulp.src('src/css/*.scss')
-   		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-  		.pipe(uglifycss())
-   		.pipe(concat('main.css')) 
-        .pipe(gulp.dest('dist/css/'));
+   	return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss','src/css/*.scss'])
+   		.pipe(sass().on('error', sass.logError))
+   		.pipe(uglifycss())
+      .pipe(concat('main.css')) 
+      .pipe(gulp.dest('dist/css/'));
 });
 
 //task para o js
@@ -27,6 +27,6 @@ gulp.task('js', function () {
 //task para o js
 gulp.task('watch', function() {
 
-		gulp.watch('src/css/*.scss', gulp.series('style'));
+		gulp.watch(['node_modules/bootstrap/scss/*.scss','src/css/*.scss'], gulp.series('style'));
 		gulp.watch('src/js/*.js', gulp.series('js'));
 }); 
