@@ -27,6 +27,6 @@ gulp.task('js', function () {
 //task para o js
 gulp.task('watch', function() {
 
-		gulp.watch(['node_modules/bootstrap/scss/*.scss','src/css/*.scss'], gulp.series('style'));
+		gulp.watch('src/css/*.scss', gulp.series('style'));
 		gulp.watch('src/js/*.js', gulp.series('js'));
 }); 
