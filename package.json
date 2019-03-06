@@ -4,7 +4,7 @@
   "description": "site of portfolio",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "^4.2.1",
+    "bootstrap": "^4.3.1",
     "gulp-uglifycss": "^1.1.0",
     "jquery": "^3.3.1"
   },

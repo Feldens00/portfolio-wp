@@ -1,7 +1,21 @@
 <!-- Sidebar -->
 	<div class="sidebar">
-		<div class="container py-md-2 py-sm-5 my-md-3 my-sm-0 container-border">
-			<div class="row py-5">
+		<div class="container d-md-none d-sm-block p-3" id="container-bar">
+			<div class="row">
+				<div class="col-sm-12">
+					<a href="#" onclick="open_sidebar();">
+						<i class="fas fa-bars fa-2x"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="container py-md-2 py-sm-5 my-md-3 my-sm-0 container-border" id="container-menu">
+			<div class="row py-md-5 py-3">
+				<div class="col-sm-12 d-md-none d-sm-block text-right">
+					<a href="#" onclick="close_sidebar();">
+						<i class="fas fa-times-circle fa-2x"></i>
+					</a>
+				</div>
 				<div class="col-sm-12 text-center pt-5">
 					<?php 
 						$img = Util::getWidget('img-menu');

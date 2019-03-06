@@ -1,4 +1,39 @@
 .list {
+
+	$green: #50c56c;
+	$blue: #4ec4ce;
+	$purple: red;
+	
+	@mixin gradient-border($color1, $color2, $border-width, $direction) {
+	  border: none;
+	  background-repeat: no-repeat;
+	  background-image: linear-gradient(#{$direction}, $color1 0%, $color2 100%), linear-gradient(#{$direction}, $color1 0%, $color2 100%);
+	  @if $direction == 'to right' or $direction == 'to left' {
+	    @if $direction == 'to right' {
+	      border-left: $border-width solid $color1;
+	      border-right: $border-width solid $color2;
+	    } @else {
+	      border-left: $border-width solid $color2;
+	      border-right: $border-width solid $color1;
+	    }
+	    background-position: 0 0, 0 100%;
+	    background-size: 100% $border-width;
+	  }
+	  
+	  @if $direction == 'to top' or $direction == 'to bottom' {
+	    @if $direction == 'to top' {
+	      border-top: $border-width solid $color2;
+	      border-bottom: $border-width solid $color1;
+	    } @else {
+	      border-top: $border-width solid $color1;
+	      border-bottom: $border-width solid $color2;
+	    }
+	    background-position: 0 0, 100% 0;
+	    background-size: $border-width 100%;
+	  }
+	}
+	
+
 	.row > div {
 	    -webkit-transition: all 0.6s ease-in-out;
 	    -moz-transition: all 0.6s ease-in-out;
@@ -31,22 +66,23 @@
 		top: 0;
 		left: 0;
 	  // background-color: rgba(75,75,75,0.7);
-		-webkit-transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.81);
-	 	transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.81);
+		// -webkit-transition: all 0.2s  cubic-bezier(0.88,-0.99, 0, 1.81);
+	 // 	transition: all 0.2s  cubic-bezier(0.88,-0.99, 0, 1.81);
 	}
 
 	.hovereffect:hover .overlay {
-	  	background-color: rgba(249, 157, 60, 0.9);
+	  	background-color: rgba(96, 96, 96, 0.9);
 	}
 
 	.hovereffect .overlay-border {
 		height: 90%;
 	    width: 90%;
-	    margin: 15px;
+	    margin: 5%;
+	    // transition: border-color 0.5s ease;
 	}
 
-	.hovereffect:hover .overlay-border {
-	    border: 5px solid white;
+	.hovereffect:hover .overlay-border {	
+	    @include gradient-border($green, $blue, 3px, 'to right');
 	}
 
 	.hovereffect img {
@@ -77,7 +113,7 @@
 
 	.hovereffect a.info {
 		position: relative;
-		top: 35%;
+		top: 25%;
 		display: inline-block;
 		text-decoration: none;
 		padding: 7px 14px;
@@ -93,6 +129,7 @@
 		transition: all .4s cubic-bezier(0.88,-0.99,0,1.81);
 		font-weight: normal;
 		font-family: 'Righteous', cursive;
+		font-size:25px;
 	}
 
 	.hovereffect:hover a.info {
@@ -101,9 +138,5 @@
 		-webkit-transform: scale(1);
 		-ms-transform: scale(1);
 		transform: scale(1);
-	}
-
-	.hovereffect a.info:hover {
-		box-shadow: 0 0 5px #fff;
 	}
 }
