@@ -1,6 +1,10 @@
 body {
     height: 100vh;
 }
+body.active {
+  overflow: hidden;
+}
+
 * {
    margin: 0;
    padding: 0;
@@ -8,12 +12,18 @@ body {
 hr {
   width: 80%; color: black; height: 1px; background-color:black;
 }
+p, h1, h2, h3, h4, h5, h6, a{
+  font-family: 'Carrois Gothic SC', sans-serif;
+}
 .title {
     color: #FBB040;
 }
 .main {
   margin-left: 400px;
   background: white;
+}
+.main.active {
+  margin-left: 0px;
 }
 .middle-content {
 	position: relative;
@@ -28,4 +38,10 @@ hr {
 	    background-color: #FBB040;
 	    padding: 10px;
     }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    margin-left: 0;
+  }
 }

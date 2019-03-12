@@ -23,5 +23,9 @@ function check_pages_live() {
   if (get_page_by_path('about') == NULL) {
     create_pages_fly('SOBRE','about','');
   }
+
+  if (get_page_by_path('service') == NULL) {
+    create_pages_fly('SERVIÇO','service','');
+  }
 }
 add_action('init', 'check_pages_live');

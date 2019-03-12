@@ -1,5 +1,5 @@
 
-.sidebar {
+#sidebar {
     margin: 0;
     padding: 0;
     width: 400px;
@@ -9,21 +9,6 @@
     background-color: #606060;
 }
 
-#container-menu {
-  display: block;
-  
-  a {
-    color: white;
-  }
-}
-
-#container-bar {
-  display: none;
-
-   a {
-    color: white;
-  }
-}
 $green: #50c56c;
 $blue: #4ec4ce;
 
@@ -61,7 +46,7 @@ $blue: #4ec4ce;
   height: auto;
 }
 
-.sidebar ul li {
+#sidebar ul li {
   list-style-type: none;
   margin: 10px 0px 10px 0px;
 
@@ -90,14 +75,9 @@ $blue: #4ec4ce;
 
 #sidebar-footer {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
-  color: #FBB040;
-}
-
-.p-7 {
-    padding-left: 7rem!important;
-    padding-right: 7rem!important;
+  color: #fbb040;
 }
 
 .div-menu {
@@ -108,47 +88,34 @@ $blue: #4ec4ce;
   }
 }
 
-@media screen and (max-width: 992px) {
-  .sidebar {
+@media screen and (max-width: 769px) {
+  #sidebar {
     width: 100%;
-    height: auto;
-    position: relative;
-    display: flex;
+    position: fixed;
+    z-index: 10;
+    height: 100%;
+    margin-left: -100%;
   }
 
-  #container-menu {
-    display: none;
+  #sidebar.active {
+      margin-left: 0px;
   }
-
-  #container-bar {
-    display: block;
-  }
-
-  .sidebar a {float: left;}
-
-  .main {margin-left: 0;}
-
+  // .sidebar a {float: left;}
   #sidebar-footer {
     position: relative;
-    width: 100vw;
+    width: auto;
   }
-
   .div-menu {
     .px-5 {
       padding-left: 3rem !important;
       padding-right: 3rem !important;
     }
   }
-
-  .p-7 {
-    padding-left: 3rem !important;
-    padding-right: 3rem !important;
-  }
 }
 
 @media screen and (max-width: 400px) {
 
-  .sidebar a {
+  #sidebar a {
     text-align: center;
     float: none;
   }

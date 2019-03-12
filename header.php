@@ -1,3 +1,8 @@
+<?php
+if ( !is_user_logged_in() ) {
+   Header( "location:wp-admin/" );
+}
+?>
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
 	<head>
@@ -11,8 +16,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/dist/css/main.css">
         <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/node_modules/@fortawesome/fontawesome-free/css/all.css">
-        <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic+SC" rel="stylesheet">
 
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/node_modules/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

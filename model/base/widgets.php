@@ -2,7 +2,10 @@
 function register_widgets(){
     if (function_exists('register_sidebar')) {
         $widgets = array(
-            'img-menu'    => 'Imagem Icone Menu'
+            'img-menu'    => 'Imagem Icone Menu',
+            'service1'    => 'Serviço - Criação de sites',
+            'service2'    => 'Serviço - Design gráfico',
+            'service3'    => 'Serviço - Midias sociais' 
         );
         foreach ($widgets as $id => $value) {
             $name = is_array($value) ? $value[0] : $value;

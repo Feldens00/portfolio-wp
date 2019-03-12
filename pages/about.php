@@ -3,6 +3,7 @@
 ?>
 <?php get_header(); ?>
 <?php get_template_part('components/item','sidebar'); ?>
+<?php get_template_part('components/item','toggle-sidebar'); ?>
   <div class="main page">
   	<div class="container">
   		<div class="row">

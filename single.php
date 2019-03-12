@@ -2,6 +2,7 @@
 <?php get_header(); ?>
 <?php get_template_part('components/item','sidebar'); ?>
 	<div class="main">
+		<?php get_template_part('components/item','toggle-sidebar'); ?>
 		<section id="single">
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 				<div class="container-fluid p-5">

@@ -75,5 +75,10 @@ class Util {
         }
         return $widgets;
     }
+
+    public static function getFirstWidgetObj($widget_id) {
+        $widgets = self::getWidgetObj($widget_id);
+        return array_shift($widgets['items']);
+    }
    
 }
