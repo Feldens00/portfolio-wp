@@ -1,0 +1,84 @@
+#contact-page {
+
+	$green: #50c56c;
+	$blue: #4ec4ce;
+
+	@mixin gradient-border($color1, $color2, $border-width, $direction) {
+	  border: none;
+	  background-repeat: no-repeat;
+	  background-image: linear-gradient(#{$direction}, $color1 0%, $color2 100%), linear-gradient(#{$direction}, $color1 0%, $color2 100%);
+	  @if $direction == 'to right' or $direction == 'to left' {
+	    @if $direction == 'to right' {
+	      border-left: $border-width solid $color1;
+	      border-right: $border-width solid $color2;
+	    } @else {
+	      border-left: $border-width solid $color2;
+	      border-right: $border-width solid $color1;
+	    }
+	    background-position: 0 0, 0 100%;
+	    background-size: 100% $border-width;
+	  }
+	  
+	  @if $direction == 'to top' or $direction == 'to bottom' {
+	    @if $direction == 'to top' {
+	      border-top: $border-width solid $color2;
+	      border-bottom: $border-width solid $color1;
+	    } @else {
+	      border-top: $border-width solid $color1;
+	      border-bottom: $border-width solid $color2;
+	    }
+	    background-position: 0 0, 100% 0;
+	    background-size: $border-width 100%;
+	  }
+	}
+
+	.btn-chat-whats {
+		color: white;
+	    background-color: #25d366;
+	    padding: 15px;
+	    border-radius: 35px;
+	    border: 0px;
+	}
+
+	.btn-form {
+		background-image: linear-gradient(to right, $green 0%, $blue 100%);;
+	    border: none;
+	    padding: 10px 50px 10px 50px;
+	    color: white;
+	    font-size: 20px;
+	    font-weight: bold;
+	    border-radius: 10px;
+	}
+
+	input, textarea {
+		border: 0px;
+		border-bottom: 1px solid #d3d3d3;
+		color: black;
+		font-weight: bold;
+		padding: 10px;
+	}
+
+	::-webkit-input-placeholder {
+	   color: black;
+	   font-weight: bold;
+	   padding: 5px;
+	}
+
+	:-moz-placeholder {
+	   color: black;
+	   font-weight: bold;
+	   padding: 5px;
+	}
+
+	::-moz-placeholder {
+	   color: black;
+	   font-weight: bold;  
+	   padding: 5px;
+	}
+
+	:-ms-input-placeholder {  
+	   color: black;
+	   font-weight: bold;  
+	   padding: 5px;
+	}
+}

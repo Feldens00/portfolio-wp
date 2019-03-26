@@ -2,10 +2,9 @@
 	<div id="sidebar">
 		<div class="container">
 			<div class="row py-md-2 py-3">
-				<div class="col-sm-12 d-md-none d-xs-block">
-					<button type="button" id="btn-close-sidebar" class="btn btn-info">
-					    <i class="fas fa-align-left"></i>
-					    <span>Toggle Sidebar</span>
+				<div class="col-sm-12 text-right d-md-none d-xs-block">
+					<button type="button" id="btn-close-sidebar" class="btn">
+					    <i class="fas fa-times"></i>
 					</button>
 				</div>
 				<div class="col-sm-12 text-center py-5">

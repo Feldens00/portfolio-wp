@@ -1,10 +1,9 @@
 <!-- Toggle -->
-<div class="container py-2 d-md-none d-xs-block">
+<div class="container py-2 d-md-none d-sm-block d-xs-block">
 	<div class="row p-3">
-		<div class="col-sm-12 shadow bg-white rounded">
+		<div class="col-sm-12">
 			<button type="button" id="btn-open-sidebar" class="btn btn-info">
-			    <i class="fas fa-align-left"></i>
-			    <span>Toggle Sidebar</span>
+			    <i class="fas fa-bars"></i>
 			</button>
 		</div>
 	</div>

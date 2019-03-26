@@ -12,9 +12,12 @@ body.active {
 hr {
   width: 80%; color: black; height: 1px; background-color:black;
 }
-p, h1, h2, h3, h4, h5, h6, a{
-  font-family: 'Carrois Gothic SC', sans-serif;
+
+p, h1, h2, h3, h4, h5, h6, a {
+  /*text-align: justify;*/
+  font-family: 'Poppins', sans-serif;
 }
+
 .title {
     color: #FBB040;
 }

@@ -13,12 +13,12 @@
           </div>
           <div class="h-85">
             <?php $service1 = Util::getFirstWidgetObj('service1');?>
-            <div class="px-5 h-50">
+            <div class="p-xl-5 p-md-5 h-50">
               <h3><?php echo $service1['title'];?></h3>
               <p><?php echo $service1['content']; ?></p>
             </div>
             <div class="h-50 d-xl-flex d-block align-items-end text-center">
-              <img src="<?php echo get_template_directory_uri(); ?>/src/img/sites.png" class="img-fluid">
+              <img src="<?php echo get_template_directory_uri(); ?>/src/img/sites.png" class="img-site">
             </div>
           </div>
   			</div>
@@ -29,11 +29,11 @@
           </div>
           <div class="h-75">
             <?php $service1 = Util::getFirstWidgetObj('service1');?>
-            <div class="p-5 h-50">
+            <div class="p-xl-5 p-md-5 h-75 text-middle">
               <h3><?php echo $service1['title'];?></h3>
               <p><?php echo $service1['content']; ?></p>
             </div>
-            <div class="h-50 text-right footer-block">
+            <div class="h-25 text-right footer-block">
               <img src="<?php echo get_template_directory_uri(); ?>/src/img/design-grafico-2.png" class="img-fluid">
             </div>
           </div>
@@ -44,7 +44,7 @@
           </div>
           <div class="h-85">
             <?php $service3 = Util::getFirstWidgetObj('service3');?>
-            <div class="px-5 h-50">
+            <div class="p-xl-5 p-md-5 h-50">
               <h3><?php echo $service3['title'];?></h3>
               <p><?php echo $service3['content']; ?></p>
             </div>
