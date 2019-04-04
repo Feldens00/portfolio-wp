@@ -5,9 +5,9 @@
 <?php get_template_part('components/item','sidebar'); ?>
   <div class="main page">
     <?php get_template_part('components/item','toggle-sidebar'); ?>
-  	<div class="container" id="contact-page">
-  		<div class="row pt-md-5 p-0">
-        <div class="col-sm-12 text-center">
+  	<div class="container pt-5" id="contact-page">
+  		<div class="row">
+        <div class="col-sm-12 text-center py-md-5 pb-5">
           <p class="text-muted">Como posso te ajudar?</p>
           <p>
             <a href="#">

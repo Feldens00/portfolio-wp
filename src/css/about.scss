@@ -1,0 +1,24 @@
+#about-page {
+	height: 100vh;
+
+	p {
+		text-align: justify;
+	}
+
+	#footer-img {
+		height: 100%;
+	}
+
+	@media screen and (max-width: 1400px) {
+		height: auto;
+
+		#head-img {
+			width: 50% !important;
+		}
+
+		#footer-img {
+			height: auto;
+			max-height: 100%;
+		}
+	}
+}

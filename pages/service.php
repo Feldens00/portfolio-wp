@@ -28,10 +28,10 @@
             <img src="<?php echo get_template_directory_uri(); ?>/src/img/design-grafico.png" class="mh-100 w-auto">
           </div>
           <div class="h-75">
-            <?php $service1 = Util::getFirstWidgetObj('service1');?>
+            <?php $service2 = Util::getFirstWidgetObj('service2');?>
             <div class="p-xl-5 p-md-5 h-75 text-middle">
-              <h3><?php echo $service1['title'];?></h3>
-              <p><?php echo $service1['content']; ?></p>
+              <h3><?php echo $service2['title'];?></h3>
+              <p><?php echo $service2['content']; ?></p>
             </div>
             <div class="h-25 text-right footer-block">
               <img src="<?php echo get_template_directory_uri(); ?>/src/img/design-grafico-2.png" class="img-fluid">

@@ -1,3 +1,36 @@
+$green: #50c56c;
+$blue: #4ec4ce;
+$purple: red;
+
+@mixin gradient-border($color1, $color2, $border-width, $direction) {
+  border: none;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#{$direction}, $color1 0%, $color2 100%), linear-gradient(#{$direction}, $color1 0%, $color2 100%);
+  @if $direction == 'to right' or $direction == 'to left' {
+    @if $direction == 'to right' {
+      border-left: $border-width solid $color1;
+      border-right: $border-width solid $color2;
+    } @else {
+      border-left: $border-width solid $color2;
+      border-right: $border-width solid $color1;
+    }
+    background-position: 0 0, 0 100%;
+    background-size: 100% $border-width;
+  }
+  
+  @if $direction == 'to top' or $direction == 'to bottom' {
+    @if $direction == 'to top' {
+      border-top: $border-width solid $color2;
+      border-bottom: $border-width solid $color1;
+    } @else {
+      border-top: $border-width solid $color1;
+      border-bottom: $border-width solid $color2;
+    }
+    background-position: 0 0, 100% 0;
+    background-size: $border-width 100%;
+  }
+}
+
 body {
     height: 100vh;
 }
@@ -32,6 +65,12 @@ p, h1, h2, h3, h4, h5, h6, a {
 	position: relative;
 	top: 25%;
 }
+.bg-grey {
+  background-color: #606060;
+}
+
+//Pagination 
+
 .div-pagination {
 	text-align: center;
   display: block;
@@ -41,6 +80,29 @@ p, h1, h2, h3, h4, h5, h6, a {
 	    background-color: #FBB040;
 	    padding: 10px;
     }
+}
+
+//Loadmore
+
+.loadmore{
+  @include gradient-border($green, $blue, 3px, 'to right');
+  border-radius: 2px;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  letter-spacing:1px;
+  cursor:pointer;
+  text-transform: uppercase;
+  padding: 10px 0;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out; 
+  color: #939393; 
+}
+.loadmore:hover{ 
+  color: #fff;
+  background-repeat: repeat;
+  background-image: linear-gradient(to right, $green 0%, $blue 100%);
 }
 
 @media screen and (max-width: 768px) {

@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-	<div id="sidebar">
+	<div id="sidebar" class="bg-grey">
 		<div class="container">
 			<div class="row py-md-2 py-3">
 				<div class="col-sm-12 text-right d-md-none d-xs-block">
@@ -13,7 +13,9 @@
 						$xpath = new DOMXPath(@DOMDocument::loadHTML($img));
 						$src = $xpath->evaluate("string(//img/@src)");
 					?>
-					<img src="<?php echo $src; ?>" class="img-icone">
+					<a href="<?php echo get_site_url() ;?>">
+						<img src="<?php echo $src; ?>" class="img-icone">
+					</a>
 				</div>
 				<div class="col-sm-12 p-md-5 py-sm-2">
 
@@ -21,11 +23,23 @@
 				</div>
 			</div>
 			<div class="row p-md-2 p-sm-2 text-center" id="sidebar-footer">
-				<div class="col-md-8 offset-md-2 col-xs-12">
+				<div class="col-md-6 offset-md-3 col-xs-12">
 					<div class="row p-2">
-						<div class="col"><i class="fab fa-facebook-square fa-2x"></i></div>
-						<div class="col"><i class="fab fa-instagram fa-2x"></i></i></div>
-						<div class="col"><i class="fab fa-linkedin fa-2x"></i></div>
+						<div class="col">
+							<a href="https://www.facebook.com/alexandregbk">
+								<img src="<?php echo get_template_directory_uri(); ?>/src/img/face.png" class="img-fluid" width="35px">
+							</a>
+						</div>
+						<div class="col">
+							<a href="https://www.instagram.com/xandygbk/">
+								<img src="<?php echo get_template_directory_uri(); ?>/src/img/insta.png" class="img-fluid" width="35px">
+							</a>
+						</div>
+						<div class="col">
+							<a href="https://www.linkedin.com/in/alexandre-kuhn-3638085a/">
+								<img src="<?php echo get_template_directory_uri(); ?>/src/img/linkedim.png" class="img-fluid" width="35px">
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

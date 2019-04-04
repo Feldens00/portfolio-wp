@@ -21,6 +21,7 @@ if ( !is_user_logged_in() ) {
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/node_modules/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/node_modules/infinite-scroll/dist/infinite-scroll.pkgd.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/dist/js/main.js"></script>
   		

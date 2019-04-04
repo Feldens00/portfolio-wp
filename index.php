@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 <?php get_template_part('components/item','sidebar'); ?>
-	<div class="main">
+	<div class="main bg-grey">
 			<?php get_template_part('components/item','toggle-sidebar'); ?>
 			<?php get_template_part('loop'); ?>
-			<?php get_template_part('pagination'); ?>
 	</div>
 <?php get_footer(); ?>
