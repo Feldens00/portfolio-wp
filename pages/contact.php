@@ -10,7 +10,7 @@
         <div class="col-sm-12 text-center py-md-5 pb-5">
           <p class="text-muted">Como posso te ajudar?</p>
           <p>
-            <a href="#">
+            <a href="https://wa.me/5551992306664?text=Olá!%20Tudo%20bem?%20Entro%20em%20contato%20através%20do%20site%20AlexandreGBK!">
               <button class="btn-chat-whats">
                   Conversar pelo Whatsapp
               </button>

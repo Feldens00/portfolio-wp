@@ -37,18 +37,29 @@
 	    background-color: #25d366;
 	    padding: 15px;
 	    border-radius: 35px;
-	    border: 0px;
+	    border: 1px solid #25d366;
+	}
+
+	.btn-chat-whats:hover {
+		color: #25d366;
+	    background-color: transparent;
+	    border: 1px solid #25d366;
 	}
 
 	.btn-form {
-		background-image: linear-gradient(to right, $green 0%, $blue 100%);
-	    border: none;
+		@include gradient-border($green, $blue, 3px, 'to right');
+		background-color: transparent;
 	    padding: 10px 50px 10px 50px;
-	    color: white;
+	    color: #939393;
 	    font-size: 20px;
 	    font-weight: bold;
-	    border-radius: 10px;
 	    width: 200px;
+	}
+
+	.btn-form:hover {
+		color: white;
+		background-repeat: repeat;
+    	background-image: linear-gradient(to right, $green 0%, $blue 100%);
 	}
 
 	input, textarea {

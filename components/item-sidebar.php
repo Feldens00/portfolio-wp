@@ -26,17 +26,17 @@
 				<div class="col-md-6 offset-md-3 col-xs-12">
 					<div class="row p-2">
 						<div class="col">
-							<a href="https://www.facebook.com/alexandregbk">
+							<a href="https://www.facebook.com/alexandregbk" target="_blank">
 								<img src="<?php echo get_template_directory_uri(); ?>/src/img/face.png" class="img-fluid" width="35px">
 							</a>
 						</div>
 						<div class="col">
-							<a href="https://www.instagram.com/xandygbk/">
+							<a href="https://www.instagram.com/xandygbk/" target="_blank">
 								<img src="<?php echo get_template_directory_uri(); ?>/src/img/insta.png" class="img-fluid" width="35px">
 							</a>
 						</div>
 						<div class="col">
-							<a href="https://www.linkedin.com/in/alexandre-kuhn-3638085a/">
+							<a href="https://www.linkedin.com/in/alexandre-kuhn-3638085a/" target="_blank">
 								<img src="<?php echo get_template_directory_uri(); ?>/src/img/linkedim.png" class="img-fluid" width="35px">
 							</a>
 						</div>

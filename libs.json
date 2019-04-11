@@ -1,0 +1,36 @@
+[
+  {
+    "copy": "node_modules/bootstrap/dist/css/bootstrap.min.css"
+  },
+  {
+    "shell": [
+      "mkdir -p public/assets/stylesheets/lib/fontawesome-free",
+      "mkdir -p public/assets/stylesheets/lib/fontawesome-free/css",
+      "mkdir -p public/assets/stylesheets/lib/fontawesome-free/webfonts",
+      "cp node_modules/@fortawesome/fontawesome-free/webfonts/* public/assets/stylesheets/lib/fontawesome-free/webfonts/",
+      "cp node_modules/@fortawesome/fontawesome-free/css/all.css public/assets/stylesheets/lib/fontawesome-free/css/all.css"
+    ],
+    "use": "fontawesome-free/css/all.css"
+  },
+  {
+    "copy": "node_modules/animate.css/animate.min.css"
+  },
+  {
+    "copy": "node_modules/jquery/dist/jquery.min.js"
+  },
+  {
+    "copy": "node_modules/popper.js/dist/umd/popper.min.js"
+  },
+  {
+    "copy": "node_modules/bootstrap/dist/js/bootstrap.min.js"
+  },
+  {
+    "copy": "node_modules/gsap/src/minified/TweenMax.min.js"
+  },
+  {
+    "copy": "node_modules/jquery.maskedinput/src/jquery.maskedinput.js"
+  },
+  {
+    "copy": "node_modules/sweetalert/dist/sweetalert.min.js"
+  }
+]

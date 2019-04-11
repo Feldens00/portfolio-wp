@@ -48,6 +48,15 @@
 	   }
 	}
 
+	.img-course {
+		width: 100%;
+		height: 200px;
+		background-image: url(posfg.com.br/wp-content/uploads/2017/08/logo-esperara.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+
 	.hovereffect {
 		cursor: pointer;
 		width: 100%;
@@ -131,5 +140,12 @@
 		-webkit-transform: scale(1);
 		-ms-transform: scale(1);
 		transform: scale(1);
+	}
+
+	@media screen and (max-width: 768px) {
+	  
+	  .hovereffect p.info {
+		top: 25%;
+		}
 	}
 }

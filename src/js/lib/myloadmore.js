@@ -1,3 +1,10 @@
+// loading page
+jQuery(window).load(function() {
+	$("body").css('overflow','auto');
+	$( "#loading" ).fadeOut(1000);
+});
+
+
 jQuery(function($){ // use jQuery code inside this to avoid "$ is not defined" error
 	$('.loadmore').click(function(){
  

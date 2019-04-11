@@ -3,6 +3,7 @@ function register_widgets(){
     if (function_exists('register_sidebar')) {
         $widgets = array(
             'img-menu'    => 'Imagem Icone Menu',
+            'img-menu-mobile'    => 'Imagem Icone Menu Mobile',
             'service1'    => 'Serviço - Criação de sites',
             'service2'    => 'Serviço - Design gráfico',
             'service3'    => 'Serviço - Midias sociais' 
