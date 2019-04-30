@@ -16,16 +16,16 @@ function create_pages_fly($pageName,$slug, $template) {
 }
 function check_pages_live() {
 
-  if (get_page_by_path('contact') == NULL) {
-    create_pages_fly('CONTATO','contact','');
+  if (get_page_by_path('contato') == NULL) {
+    create_pages_fly('CONTATO','contato','');
   }
 
-  if (get_page_by_path('about') == NULL) {
-    create_pages_fly('SOBRE','about','');
+  if (get_page_by_path('quem-sou-eu') == NULL) {
+    create_pages_fly('QUEM SOU EU','quem-sou-eu','');
   }
 
-  if (get_page_by_path('service') == NULL) {
-    create_pages_fly('SERVIÇO','service','');
+  if (get_page_by_path('o-que-eu-faco') == NULL) {
+    create_pages_fly('O QUE EU FAÇO','o-que-eu-faco','');
   }
 }
 add_action('init', 'check_pages_live');

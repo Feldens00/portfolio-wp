@@ -16,7 +16,7 @@
               </button>
             </a>
           </p>
-          <p class="text-muted">Ou, se preferir, me enviei uma mensagem:</p>
+          <p class="text-muted">Ou, se preferir, me envie uma mensagem:</p>
         </div>
   			<div class="col-sm-12 text-center pt-5">
   				

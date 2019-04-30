@@ -1,7 +1,7 @@
 <?php
-/*if ( !is_user_logged_in() ) {
-   Header( "location:wp-admin/" );
-}*/
+// if ( !is_user_logged_in() ) {
+//    Header( "location:wp-admin/" );
+// }
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
@@ -12,7 +12,6 @@
         <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
         <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script> -->
 
-        <!-- <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>'/node_modules/bootstrap/dist/css/bootstrap.min.css'"> -->
         <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/dist/css/main.css">
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
         
