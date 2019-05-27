@@ -22,6 +22,42 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
+		<meta property="og:locale" content="pt_BR">
+		<?php 
+			if(is_home()){
+			 
+			    $url = get_bloginfo("url");
+			    
+			}elseif(is_single() || is_page()){
+			 
+			    global $post;
+			    $url = get_permalink($post->ID);
+			}
+		?>
+
+		<meta property="og:url" content="<?php echo $url; ?>">
+
+		<meta property="og:title" content="the_title()">
+		<meta property="og:site_name" content="AlexandreGBK">
+
+		<meta property="og:description" content="<?php bloginfo('description'); ?>">
+		<?php 
+			if(is_home()){
+			 
+			    $img = get_template_directory_uri().'/img/logo2.jpg';
+			    $img_type = 'image/jpeg';
+			}elseif(is_single() || is_page()){
+			 
+			    global $post;
+			    $img = get_the_post_thumbnail_url($post->ID);
+			    $img_type = 'image/png';
+			 
+			}
+		?>
+		<meta property="og:image" content="<?php echo $img;?>">
+		<meta property="og:image:type" content="<?php echo $img_type;?>">
+		<meta property="og:type" content="website">
+
 
 		<?php wp_head(); ?>	
 	</head>
