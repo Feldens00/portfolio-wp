@@ -9,5 +9,5 @@
 
 			get_template_part('pagination');  
 		?>
+		<?php get_footer(); ?>
 	</div>
-<?php get_footer(); ?>

@@ -3,5 +3,5 @@
 	<div class="main bg-grey" id="main">
 			<?php get_template_part('components/item','toggle-sidebar'); ?>
 			<?php get_template_part('loop'); ?>
+			<?php get_footer(); ?>
 	</div>
-<?php get_footer(); ?>
